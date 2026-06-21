@@ -28,7 +28,38 @@
     <p>Select a menu item.</p>
   </div>
 
-  
+  <div id="sportsPage" class="sports-container">
+
+    <h2>🏆 Sports Categories</h2>
+
+    <div class="sports-grid">
+
+      <div class="sport-card">
+        <div class="icon">⚽</div>
+        <h3>Football</h3>
+        <p>Live matches, predictions & world cup games</p>
+      </div>
+
+      <div class="sport-card">
+        <div class="icon">🏀</div>
+        <h3>Basketball</h3>
+        <p>NBA matches & live scores</p>
+      </div>
+
+      <div class="sport-card">
+        <div class="icon">🎾</div>
+        <h3>Tennis</h3>
+        <p>Grand slam tournaments & live stats</p>
+      </div>
+
+      <div class="sport-card">
+        <div class="icon">🏐</div>
+        <h3>Volleyball</h3>
+        <p>International leagues & live games</p>
+      </div>
+
+    </div>
+  </div>
   <!--MAIN-->
   <div class="container">
 
@@ -142,16 +173,18 @@
 
     let liveBtn = document.getElementById("liveBtn");
     let predictionsBtn = document.getElementById('predictionsBtn');
-   
+    let sportBtn = document.getElementById('sportBtn');
     let container = document.querySelector('.container');
     let content = document.getElementById('content');
+    let sportscontainer = document.getElementById('sportsPage');
 
     liveBtn.onclick = function () {
       
     container.style.opacity = '0';
-
+    sportscontainer.style.opacity = '0';  
     setTimeout(() => {
       container.style.display = 'none';
+      sportscontainer.style.display = 'none';
       content.style.display = 'block';
 
       setTimeout(() => {
@@ -182,9 +215,10 @@
     predictionsBtn.onclick = function () {
 
       content.style.opacity = '0';
-
+      sportscontainer.style.opacity = '0';
       setTimeout(() => {
         content.style.display = 'none';
+        sportscontainer.style.display = 'none';
         container.style.display = 'block';
         
         setTimeout(() => {
@@ -192,6 +226,22 @@
         }, 50);
 
       }, 400);
+    }
+
+    sportBtn.onclick = function () {
+
+    container.style.opacity = '0';
+    content.style.opacity = '0';
+    setTimeout(() => {
+      container.style.display = 'none';
+      content.style.display = 'none';
+      sportscontainer.style.display = 'block';
+
+      setTimeout(() => {
+        sportscontainer.style.opacity = '1';
+      }, 50);
+
+    }, 400);   
     }
   </script>
 </body>

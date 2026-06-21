@@ -74,6 +74,47 @@
     border:1px solid #00ff88;
     border-radius:8px;
   }
+
+    .sports-container {
+      padding: 30px;
+      color: #00ff88;
+      font-family: "Courier New", monospace;
+      opacity: 0;
+      display: none;
+    }
+
+    .sports-container h2 {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .sports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .sport-card {
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid #00ff88;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+      color: white;
+    }
+
+    .sport-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px #00ff88;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
     /* CONTAINER */
     .container {
     padding: 30px;
