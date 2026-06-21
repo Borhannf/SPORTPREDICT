@@ -57,3 +57,65 @@
       color: #22c55e;
     }
 
+    /* CONTAINER */
+    .container {
+    padding: 30px;
+    }
+
+    /* CARD */
+    .card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ff88;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+    backdrop-filter: blur(6px);
+    }
+
+    .card h3 {
+    color: #00ff88;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 560px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid  #00ff88;
+    }
+
+    /* MATCH */
+    .match {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px dashed rgba(0, 255, 136, 0.3);
+    font-size: 18px;
+    }
+
+    .match img {
+    width: 22px;
+    margin: 0 5px;
+    vertical-align: middle;
+    }
+
+    /* BUTTON */
+    .btn {
+    background: transparent;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+    .btn:hover {
+    background: #22c55e87;
+    color: black;
+    box-shadow: 0 0 15px #00ff88;
+    }
