@@ -56,13 +56,14 @@
     nav a:hover {
       color: #22c55e;
     }
+    /*MAIN => menu*/
 
     #content{
     padding:20px;
     display: none;  
     opacity: 0;
     transition: display 0.5s ease  opacity 0.8s ease;
-}
+  }
 
    .match{
     display:flex;

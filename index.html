@@ -18,8 +18,8 @@
   <!-- MENU -->
   <nav>
     <a href="#" id="liveBtn">Live</a>
-    <a href="#">Predictions</a>
-    <a href="#">Sports</a>
+    <a href="#" id="predictionsBtn">Predictions</a>
+    <a href="#" id="sportBtn">Sports</a>
     <a href="#">Betting</a>
   </nav>
   <!--MAIN => menu-->
@@ -27,6 +27,8 @@
     <h2>Welcome</h2>
     <p>Select a menu item.</p>
   </div>
+
+  
   <!--MAIN-->
   <div class="container">
 
@@ -139,6 +141,8 @@
   <script>  
 
     let liveBtn = document.getElementById("liveBtn");
+    let predictionsBtn = document.getElementById('predictionsBtn');
+   
     let container = document.querySelector('.container');
     let content = document.getElementById('content');
 
@@ -175,6 +179,20 @@
     `;
     };
     
+    predictionsBtn.onclick = function () {
+
+      content.style.opacity = '0';
+
+      setTimeout(() => {
+        content.style.display = 'none';
+        container.style.display = 'block';
+        
+        setTimeout(() => {
+          container.style.opacity = '1';
+        }, 50);
+
+      }, 400);
+    }
   </script>
 </body>
 </html>
