@@ -20,10 +20,15 @@
       font-weight: bold;
       color: #22c55e;
     }
-
+    
     .signin {
       background: #22c55e;
       padding: 8px 15px;
       border-radius: 8px;
       cursor: pointer;
+      transition: all 0.5s;
+    }
+    .signin:hover{
+        background: #22c55e87;
+        color: black;
     }
