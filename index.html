@@ -17,11 +17,16 @@
 
   <!-- MENU -->
   <nav>
-    <a href="#">Live</a>
+    <a href="#" id="liveBtn">Live</a>
     <a href="#">Predictions</a>
     <a href="#">Sports</a>
     <a href="#">Betting</a>
   </nav>
+  <!--MAIN => menu-->
+  <div id="content">
+    <h2>Welcome</h2>
+    <p>Select a menu item.</p>
+  </div>
   <!--MAIN-->
   <div class="container">
 
@@ -130,5 +135,46 @@
         © 2026 SPORTPREDICT | All Rights Reserved
     </div>
   </footer>
+
+  <script>  
+
+    let liveBtn = document.getElementById("liveBtn");
+    let container = document.querySelector('.container');
+    let content = document.getElementById('content');
+
+    liveBtn.onclick = function () {
+      
+    container.style.opacity = '0';
+
+    setTimeout(() => {
+      container.style.display = 'none';
+      content.style.display = 'block';
+
+      setTimeout(() => {
+        content.style.opacity = '1';
+      }, 50);
+
+    }, 400);
+      document.getElementById("content").innerHTML = `
+        <h2>🔴 Live Matches</h2>
+
+        <div class="match">
+            <span>🇮🇷 Iran vs Belgium 🇧🇪</span>
+            <button class="btn">Predict</button>
+        </div>
+
+        <div class="match">
+            <span>🇪🇸 Spain vs Saudi Arabia 🇸🇦</span>
+            <button class="btn">Predict</button>
+        </div>
+
+        <div class="match">
+            <span>🇺🇾 Uruguay vs Cape Verde 🇨🇻</span>
+            <button class="btn">Predict</button>
+        </div>
+    `;
+    };
+    
+  </script>
 </body>
 </html>
