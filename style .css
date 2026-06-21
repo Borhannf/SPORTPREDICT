@@ -32,3 +32,28 @@
         background: #22c55e87;
         color: black;
     }
+
+
+    /* MENU */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #1f2937;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 140px;
+      margin-right: 140px;
+      font-size: 20px;
+      transition: all 0.5s;
+    }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
