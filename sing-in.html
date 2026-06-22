@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-singin.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="backgrund">
+        <div class="master">
+            <div class="backbtn">↺</div>
+            <div class="masterimg">
+            <p>SPORTPREDICT</p>
+            </div>
+            <div class="Welcom">Welcom To Back</div>
+            <div class="abut">
+                <p>Email</p>
+                <input type="text" placeholder="email">
+                <p>Password</p>
+                <input type="password" placeholder="password">
+                <button>Sing In</button>
+            </div>
+            <div class="abut2">
+                <p>Full&nbspName</p>
+                <input type="text" placeholder="Full Name">
+
+                <p>Email</p>
+                <input type="email" placeholder="Email">
+
+                <p>Password</p>
+                <input type="password" placeholder="Password">
+
+                <p>Confirm&nbspPassword</p>
+                <input type="password" placeholder="Confirm Password">
+                <button>Sing Up</button>
+            </div>
+            <div class="help">
+                <p>Forgot <a href="#"><span>Password</span></a></p>
+                <p id="man">No<a href="#" ><span>Registered?</span></a></p>
+            </div>    
+        </div>
+    </div>
+
+   
+
+    <script>
+        let backbtn = document.querySelector('.backbtn');
+        let m = document.getElementById("man");
+        let num = 0;
+        m.onclick=function(){
+            document.querySelector('.master').style.transform ='rotateY(180deg)';
+            document.querySelector('.master').style.backgroundColor ='#22c55e';
+            document.querySelector('.masterimg').style.display='none';
+            document.querySelector('.Welcom').style.display='none';
+            document.querySelector('.abut').style.display='none';
+            document.querySelector('.help').style.display='none';
+            backbtn.style.display='flex';
+            num = 1;
+            document.querySelector('.abut2').style.transform ='rotateY(180deg)';
+            document.querySelector('.abut2').style.display='block';
+        };
+        backbtn.onclick = function(){
+
+            document.querySelector('.master').style.transform ='rotateY(0deg)';
+            document.querySelector('.master').style.backgroundColor ='';
+            document.querySelector('.masterimg').style.display='block';
+            document.querySelector('.Welcom').style.display='block';
+            document.querySelector('.abut').style.display='block';
+            document.querySelector('.help').style.display='inline';
+            backbtn.style.display='none';
+            
+            num = 0;
+            document.querySelector('.abut2').style.display='none';
+        };
+        
+    </script>
+</body>
+</html>

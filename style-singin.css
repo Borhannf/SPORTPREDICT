@@ -1,0 +1,142 @@
+*{
+    width: 0;
+    padding: 0;
+}
+.backgrund{
+    background-color: white;
+}
+.master{
+    width: 600px;
+    height: 500px;
+    background-color: rgb(217, 218, 219);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px black;
+    margin-top: 140px;
+    margin-left: 450px;
+    display:flex;
+    transition: transform 0.6s ,background-color 0.5s;
+}
+.backbtn{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+.masterimg p{
+    font-size: 22px;
+    font-weight: bold;
+    color: #22c55e;
+    margin-left: 210px;
+}
+.master .Welcom{
+    width: 24%;
+    height: 4%;
+    margin-top: 90px;
+    margin-left: 230px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: auto;
+    color: black;
+    border-bottom: 2px solid  #22c55e;
+} 
+.abut{
+    margin-top: 120px;
+    margin-left: -300px;
+    font-size: 20px;
+}
+.abut input{
+    width: 250px;
+    height: 28px;
+    border: none;
+    margin-top: -10px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #22c55e;
+    transition: 0.5s;
+}
+.abut input:hover{
+    box-shadow: 0px 0px 10px #22c55e;
+}
+.abut button{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 40px;
+    border-radius: 20px;
+    background-color: #22c55e;
+    color: aliceblue;
+    border: none;
+    transition: background-color 0.6s ease , color 0.4s ease , border 0.2s ease-in;
+}
+.abut button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.help{
+    width: 100%;
+    margin-top: 420px;    
+}
+.help p{
+    display: inline;
+    margin-left: 80px;
+}
+
+.abut2{
+    margin-top: 0px;
+    margin-left: 520px;
+    font-size: 20px;
+    display: none;
+}
+.abut2 input{
+    width: 250px;
+    height: 28px;
+    border: 0px solid white;
+    margin-top: -10px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 5px;
+    color: black;
+    transition: border 0.4s ease-in;
+}
+.abut2 input:hover{
+    border: 2px solid black;
+}
+.abut2 button{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 40px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    transition: background-color 0.6s ease , color 0.4s ease , border 0.2s ease-in;
+}
+.abut2 button:hover{
+    background-color: #17432748;
+    color:aliceblue;
+    border: 1px solid black;
+}
+.abut2 p{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
