@@ -60,6 +60,29 @@
 
     </div>
   </div>
+  <div id="matchPage" style="display:none; opacity:0;">
+    <h2 id="matchTitle"></h2>
+
+    <div class="match-info">
+        <p>📅 Date: Tomorrow</p>
+        <p>🏆 Competition: FIFA World Cup</p>
+    </div>
+
+    <div class="prediction-box">
+        <h3>Predict The Score</h3>
+
+        <input type="number" id="team1Score" placeholder="0">
+        <span>:</span>
+        <input type="number" id="team2Score" placeholder="0">
+
+        <br><br>
+
+        <button class="btn">Submit Prediction</button>
+    </div>
+</div>
+<button onclick="backToMatches()" class="btn BTN">
+    ← Back
+</button>
   <!--MAIN-->
   <div class="container">
 
@@ -73,7 +96,7 @@
         <b>vs</b>
         <img src="https://flagcdn.com/w40/jp.png"> Japan
       </div>
-      <button class="btn">Predict</button>
+      <button class="btn" onclick="openMatch('Tunisia','Japan')">Predict</button>
     </div>
 
     <br>
@@ -85,7 +108,7 @@
         <b>vs</b>
         <img src="https://flagcdn.com/w40/sa.png"> Saudi Arabia
       </div>
-      <button class="btn">Predict</button>
+      <button class="btn"onclick="openMatch('Spain','Saudi Arabia')">Predict</button>
     </div>
 
     <br>
@@ -97,7 +120,7 @@
         <b>vs</b>
         <img src="https://flagcdn.com/w40/ir.png"> Iran
       </div>
-      <button class="btn">Predict</button>
+      <button class="btn"onclick="openMatch('Belgium','Iran')">Predict</button>
     </div>
 
     <br>
@@ -109,7 +132,7 @@
         <b>vs</b>
         <img src="https://flagcdn.com/w40/cv.png"> Cape Verde
       </div>
-      <button class="btn">Predict</button>
+      <button class="btn"onclick="openMatch('Uruguay ','Cape Verde')">Predict</button>
     </div>
 
     <br>
@@ -121,7 +144,7 @@
         <b>vs</b>
         <img src="https://flagcdn.com/w40/eg.png"> Egypt
       </div>
-      <button class="btn">Predict</button>
+      <button class="btn"onclick="openMatch('New Zealand','Egypt')">Predict</button>
     </div>
 
   </div>
@@ -243,6 +266,49 @@
 
     }, 400);   
     }
+
+  function openMatch(team1, team2) {
+
+    let matchPage = document.getElementById('matchPage');
+
+    document.getElementById('matchTitle').innerText =
+        `${team1} VS ${team2}`;
+
+    container.style.opacity = '0';
+
+    setTimeout(() => {
+        document.querySelector('.BTN').style.display='block';  
+        container.style.display = 'none';
+        content.style.display = 'none';
+        sportscontainer.style.display = 'none';
+
+        matchPage.style.display = 'block';
+
+        setTimeout(() => {
+          document.querySelector('.BTN').style.opacity='1';
+          matchPage.style.opacity = '1';
+        }, 50);
+
+    }, 400);
+  }
+  function backToMatches() {
+
+    let matchPage = document.getElementById('matchPage');
+
+    matchPage.style.opacity = '0';
+
+    setTimeout(() => {
+        document.querySelector('.BTN').style.display='none'; 
+        matchPage.style.display = 'none';
+        container.style.display = 'block';
+
+        setTimeout(() => {
+          document.querySelector('.BTN').style.opacity='0';
+          container.style.opacity = '1';
+        }, 50);
+
+    }, 400);
+  }
   </script>
 </body>
 </html>
