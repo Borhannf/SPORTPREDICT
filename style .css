@@ -238,7 +238,7 @@
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: bold;
-    padding-left: 560px;
+    text-align: center;
     padding-bottom: 20px;
     border-bottom: 1px solid  #00ff88;
     }
@@ -357,5 +357,117 @@
 
   .footer-box ul li:hover {
     transform: none;
+  }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media screen and (max-width: 768px){
+
+  /* Header */
+  header{
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Menu */
+  nav{
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  nav a{
+    margin: 0;
+    font-size: 16px;
+  }
+
+  /* Main Content */
+  #content{
+    padding: 15px;
+  }
+
+  /* Cards */
+  .container{
+    padding: 15px;
+  }
+
+  .card{
+    padding: 15px;
+  }
+
+  .card h3{
+    padding-left: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Matches */
+  .match{
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .match img{
+    width: 18px;
+  }
+
+  /* Buttons */
+  .btn{
+    width: 100%;
+    max-width: 220px;
+  }
+
+  /* Sports Page */
+  .sports-container{
+    padding: 15px;
+  }
+
+  .sports-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .sport-card{
+    padding: 15px;
+  }
+
+  /* Match Prediction Page */
+  #matchPage{
+    padding: 15px;
+  }
+
+  .match-info,
+  .prediction-box{
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .prediction-box input{
+    width: 60px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .prediction-box span{
+    font-size: 22px;
+  }
+
+  /* Footer */
+  .footer{
+    padding: 25px 15px;
+  }
+
+  .footer-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-box{
+    min-width: 100%;
   }
 }

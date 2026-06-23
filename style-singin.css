@@ -1,21 +1,36 @@
 *{
-    width: 0;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.backgrund{
-    background-color: white;
+
+body{
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+/* MAIN CARD */
 .master{
     width: 600px;
-    height: 500px;
+    max-width: 95%;
+    height: auto;
+    min-height: 500px;
     background-color: rgb(217, 218, 219);
     border-radius: 20px;
     box-shadow: 0px 0px 15px black;
-    margin-top: 140px;
-    margin-left: 450px;
-    display:flex;
-    transition: transform 0.6s ,background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.6s, background-color 0.5s;
+    position: relative;
 }
+
+/* BACK BUTTON */
 .backbtn{
     position: absolute;
     top: 15px;
@@ -32,111 +47,139 @@
     font-size: 22px;
     font-weight: bold;
 }
+
+/* TITLE */
 .masterimg p{
     font-size: 22px;
     font-weight: bold;
     color: #22c55e;
-    margin-left: 210px;
+    text-align: center;
+    margin-top: 10px;
 }
-.master .Welcom{
-    width: 24%;
-    height: 4%;
-    margin-top: 90px;
-    margin-left: 230px;
-    font-family:Arial, Helvetica, sans-serif;
+
+/* WELCOME */
+.Welcom{
+    margin-top: 10px;
     font-size: 16px;
     font-weight: 700;
-    padding: auto;
     color: black;
-    border-bottom: 2px solid  #22c55e;
-} 
-.abut{
-    margin-top: 120px;
-    margin-left: -300px;
-    font-size: 20px;
+    border-bottom: 2px solid #22c55e;
+    padding-bottom: 5px;
 }
+
+/* LOGIN FORM */
+.abut{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .abut input{
-    width: 250px;
-    height: 28px;
+    width: 80%;
+    height: 35px;
     border: none;
-    margin-top: -10px;
     border-radius: 5px;
     font-size: 16px;
-    padding-left: 5px;
+    padding-left: 10px;
     color: #22c55e;
-    transition: 0.5s;
+    transition: 0.3s;
 }
+
 .abut input:hover{
     box-shadow: 0px 0px 10px #22c55e;
 }
+
+/* BUTTON */
 .abut button{
-    width: 350px;
+    width: 85%;
     height: 40px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 50px;
-    margin-left: 40px;
     border-radius: 20px;
     background-color: #22c55e;
-    color: aliceblue;
+    color: white;
     border: none;
-    transition: background-color 0.6s ease , color 0.4s ease , border 0.2s ease-in;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
 .abut button:hover{
     background-color: white;
     color: black;
     border: 1px solid black;
 }
-.help{
+
+/* SIGNUP */
+.abut2{
+    margin-top: 20px;
     width: 100%;
-    margin-top: 420px;    
-}
-.help p{
-    display: inline;
-    margin-left: 80px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.abut2{
-    margin-top: 0px;
-    margin-left: 520px;
-    font-size: 20px;
-    display: none;
-}
 .abut2 input{
-    width: 250px;
-    height: 28px;
-    border: 0px solid white;
-    margin-top: -10px;
+    width: 80%;
+    height: 35px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    padding-left: 5px;
-    color: black;
-    transition: border 0.4s ease-in;
+    padding-left: 10px;
 }
-.abut2 input:hover{
-    border: 2px solid black;
+
+/* HELP */
+.help{
+    margin-top: 20px;
+    text-align: center;
 }
-.abut2 button{
-    width: 350px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 50px;
-    margin-left: 40px;
-    border-radius: 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    transition: background-color 0.6s ease , color 0.4s ease , border 0.2s ease-in;
+
+.help p{
+    display: block;
+    margin: 8px 0;
 }
-.abut2 button:hover{
-    background-color: #17432748;
-    color:aliceblue;
-    border: 1px solid black;
+
+/* ========================= */
+/* LAPTOP RESPONSIVE */
+/* ========================= */
+@media (max-width: 1024px){
+
+    .master{
+        width: 70%;
+    }
 }
-.abut2 p{
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px){
+
+    body{
+        padding: 10px;
+    }
+
+    .master{
+        width: 95%;
+        min-height: auto;
+    }
+
+    .masterimg p{
+        font-size: 18px;
+    }
+
+    .Welcom{
+        font-size: 14px;
+    }
+
+    .abut input,
+    .abut2 input{
+        width: 90%;
+    }
+
+    .abut button,
+    .abut2 button{
+        width: 90%;
+    }
 }
